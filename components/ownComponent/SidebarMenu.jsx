@@ -8,6 +8,7 @@ import { LuPanelLeftOpen, LuPanelRightOpen } from "react-icons/lu";
 import Link from "next/link";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const SidebarContext = createContext();
 
@@ -74,6 +75,52 @@ export function SidebarMenuItem({ icon, text, link, active, alert }) {
       href={link}
     >
       {icon}
+      <span
+        className={`overflow-hidden transition-all ${
+          expand ? "ml-3 w-full" : "w-0"
+        }`}
+      >
+        {text}
+      </span>
+      {alert && (
+        <div
+          className={`absolute right-2 h-2 w-2 rounded bg-red-600 ${
+            expand ? "" : "top-2"
+          }`}
+        />
+      )}
+      {!expand && (
+        <div
+          className={`
+          invisible absolute left-full ml-6 -translate-x-3 rounded-md px-2
+          py-1 text-sm opacity-20 transition-all
+          group-hover:visible group-hover:translate-x-0 group-hover:opacity-100
+      `}
+        >
+          {text}
+        </div>
+      )}
+    </Link>
+  );
+}
+
+export function SidebarMenuChannel({ icon, text, link, active, alert }) {
+  const { expand } = useContext(SidebarContext);
+
+  return (
+    <Link
+      className={` group
+         relative my-1 flex cursor-pointer
+        items-center rounded-md px-3
+        py-1 font-medium transition-colors hover:bg-accent
+        ${active ? "" : "text-gray-600"}
+    `}
+      href={link}
+    >
+      <Avatar>
+      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+      <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
       <span
         className={`overflow-hidden transition-all ${
           expand ? "ml-3 w-full" : "w-0"
