@@ -98,6 +98,41 @@ const Sidebar = () => {
         active={true}
         alert={false}
       />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
       <SidebarMenuSeperator />
       <SidebarMenuItem
         icon={<MdOutlineSettings size={20} />}
