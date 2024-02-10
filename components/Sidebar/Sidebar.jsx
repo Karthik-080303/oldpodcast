@@ -51,14 +51,14 @@ const Sidebar = () => {
       <SidebarMenuItem
         icon={<PiMonitorPlay size={20} />}
         text="Your Channel"
-        link="/"
+        link="/yourchannel"
         active={true}
         alert={false}
       />
       <SidebarMenuItem
         icon={<MdHistory size={20} />}
         text="History"
-        link="/"
+        link="/play"
         active={true}
         alert={false}
       />
@@ -72,7 +72,7 @@ const Sidebar = () => {
       <SidebarMenuItem
         icon={<AiOutlineCloudUpload size={20} />}
         text="Upload"
-        link="/"
+        link="/upload"
         active={true}
         alert={false}
       />
@@ -88,7 +88,7 @@ const Sidebar = () => {
       <SidebarMenuTitle
         icon={<MdOutlineSubscriptions size={20} />}
         text="Subscription"
-        link="/"
+        link="/subscription"
         active={true}
       />
       <SidebarMenuChannel
@@ -98,6 +98,42 @@ const Sidebar = () => {
         active={true}
         alert={false}
       />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      <SidebarMenuChannel
+        icon=""
+        text="Channel 1"
+        link="/"
+        active={true}
+        alert={false}
+      />
+      
       <SidebarMenuSeperator />
       <SidebarMenuItem
         icon={<MdOutlineSettings size={20} />}
