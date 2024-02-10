@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,10 @@ export default function RootLayout({ children }) {
            <Sidebar/>
             <div className="flex flex-col w-full">
               <Nav />
+              <ScrollArea>
+
               {children}
+              </ScrollArea>
             </div>
           </div>
         </ThemeProvider>
